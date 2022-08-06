@@ -76,9 +76,7 @@ async def main() -> None:
     """Show example on using the Parking Antwerpen API client."""
     async with ODPAntwerpen() as client:
         disabled_parkings = await client.disabled_parkings()
-        park_and_rides = await client.park_and_rides()
         print(disabled_parkings)
-        print(park_and_rides)
 
 
 if __name__ == "__main__":
@@ -172,6 +170,7 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
 [api]: https://portaal-stadantwerpen.opendata.arcgis.com
+[disabled_parkings]: https://portaal-stadantwerpen.opendata.arcgis.com/datasets/stadAntwerpen::mindervalide-parkings/about
 [nipkaart]: https://www.nipkaart.nl
 
 <!-- MARKDOWN LINKS & IMAGES -->

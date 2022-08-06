@@ -1,0 +1,212 @@
+{
+    "type": "FeatureCollection",
+    "crs": {
+        "type": "name",
+        "properties": {
+            "name": "EPSG:4326"
+        }
+    },
+    "features": [
+        {
+            "type": "Feature",
+            "id": 1714669,
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    4.385669076816952,
+                    51.187002132837357
+                ]
+            },
+            "properties": {
+                "OBJECTID": 1714669,
+                "AANTAL_PLAATSEN": 1,
+                "KLEUR": "blauw",
+                "JRNR_GR_CBS": null,
+                "ADRES": "Abdijstraat 180, 2020 Antwerpen",
+                "START_DATE": 1433462400000,
+                "GISID": "MVPL00001"
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 1714670,
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    4.3807072901780808,
+                    51.189320286688144
+                ]
+            },
+            "properties": {
+                "OBJECTID": 1714670,
+                "AANTAL_PLAATSEN": 1,
+                "KLEUR": "wit",
+                "JRNR_GR_CBS": null,
+                "ADRES": "Abdijstraat 65, 2020 Antwerpen",
+                "START_DATE": 1433462400000,
+                "GISID": "MVPL00003"
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 1714671,
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    4.3840969861268642,
+                    51.187782052696718
+                ]
+            },
+            "properties": {
+                "OBJECTID": 1714671,
+                "AANTAL_PLAATSEN": 1,
+                "KLEUR": "wit",
+                "JRNR_GR_CBS": null,
+                "ADRES": "Abdijstraat 169, 2020 Antwerpen",
+                "START_DATE": 1433462400000,
+                "GISID": "MVPL00004"
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 1714672,
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    4.4419566820726599,
+                    51.259115144516343
+                ]
+            },
+            "properties": {
+                "OBJECTID": 1714672,
+                "AANTAL_PLAATSEN": 1,
+                "KLEUR": "wit",
+                "JRNR_GR_CBS": null,
+                "ADRES": "Adelaarstraat 52, 2170 Merksem",
+                "START_DATE": 1433462400000,
+                "GISID": "MVPL00005"
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 1714673,
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    4.4049674738537519,
+                    51.227525835021325
+                ]
+            },
+            "properties": {
+                "OBJECTID": 1714673,
+                "AANTAL_PLAATSEN": 1,
+                "KLEUR": "wit",
+                "JRNR_GR_CBS": null,
+                "ADRES": "Adriaan Brouwerstraat 33, 2000 Antwerpen",
+                "START_DATE": 1433462400000,
+                "GISID": "MVPL00007"
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 1714674,
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    4.4189495073357765,
+                    51.200761202817759
+                ]
+            },
+            "properties": {
+                "OBJECTID": 1714674,
+                "AANTAL_PLAATSEN": 1,
+                "KLEUR": "blauw",
+                "JRNR_GR_CBS": null,
+                "ADRES": "Albert Grisarstraat 58, 2018 Antwerpen",
+                "START_DATE": 1433462400000,
+                "GISID": "MVPL00008"
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 1714675,
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    4.4189872174975653,
+                    51.200701771063656
+                ]
+            },
+            "properties": {
+                "OBJECTID": 1714675,
+                "AANTAL_PLAATSEN": 1,
+                "KLEUR": "blauw",
+                "JRNR_GR_CBS": null,
+                "ADRES": "Albert Grisarstraat 60, 2018 Antwerpen",
+                "START_DATE": 1433462400000,
+                "GISID": "MVPL00009"
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 1714676,
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    4.4443420273266421,
+                    51.218163697670896
+                ]
+            },
+            "properties": {
+                "OBJECTID": 1714676,
+                "AANTAL_PLAATSEN": 1,
+                "KLEUR": "wit",
+                "JRNR_GR_CBS": "2014_11315",
+                "ADRES": "Albrecht Rodenbachstraat 8, 2140 Borgerhout",
+                "START_DATE": 1433462400000,
+                "GISID": "MVPL00010"
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 1714677,
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    4.4443314853083908,
+                    51.218214772968047
+                ]
+            },
+            "properties": {
+                "OBJECTID": 1714677,
+                "AANTAL_PLAATSEN": 1,
+                "KLEUR": "wit",
+                "JRNR_GR_CBS": "2014_11315",
+                "ADRES": "Albrecht Rodenbachstraat 10, 2140 Borgerhout",
+                "START_DATE": 1433462400000,
+                "GISID": "MVPL00011"
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 1714678,
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    4.4764001134193672,
+                    51.222932656100696
+                ]
+            },
+            "properties": {
+                "OBJECTID": 1714678,
+                "AANTAL_PLAATSEN": 1,
+                "KLEUR": "wit",
+                "JRNR_GR_CBS": null,
+                "ADRES": "Alfons Schneiderlaan 69, 2100 Deurne",
+                "START_DATE": null,
+                "GISID": "MVPL00012"
+            }
+        }
+    ],
+    "exceededTransferLimit": true
+}
