@@ -75,7 +75,7 @@ from antwerpen import ODPAntwerpen
 async def main() -> None:
     """Show example on using the Parking Antwerpen API client."""
     async with ODPAntwerpen() as client:
-        disabled_parkings = await client.disabled_parkings()
+        disabled_parkings = await client.disabled_parkings(limit=10)
         print(disabled_parkings)
 
 
@@ -180,7 +180,7 @@ SOFTWARE.
 [code-quality]: https://lgtm.com/projects/g/klaasnicolaas/python-antwerpen/context:python
 [commits-shield]: https://img.shields.io/github/commit-activity/y/klaasnicolaas/python-antwerpen.svg
 [commits-url]: https://github.com/klaasnicolaas/python-antwerpen/commits/main
-[codecov-shield]: https://codecov.io/gh/klaasnicolaas/python-antwerpen/branch/main/graph/badge.svg?token=4Y4YAYHR2D
+[codecov-shield]: https://codecov.io/gh/klaasnicolaas/python-antwerpen/branch/main/graph/badge.svg?token=LJULYJC8VT
 [codecov-url]: https://codecov.io/gh/klaasnicolaas/python-antwerpen
 [forks-shield]: https://img.shields.io/github/forks/klaasnicolaas/python-antwerpen.svg
 [forks-url]: https://github.com/klaasnicolaas/python-antwerpen/network/members
@@ -189,7 +189,7 @@ SOFTWARE.
 [license-shield]: https://img.shields.io/github/license/klaasnicolaas/python-antwerpen.svg
 [last-commit-shield]: https://img.shields.io/github/last-commit/klaasnicolaas/python-antwerpen.svg
 [maintenance-shield]: https://img.shields.io/maintenance/yes/2022.svg
-[maintainability-shield]: https://api.codeclimate.com/v1/badges/5041849456b7348f3bc7/maintainability
+[maintainability-shield]: https://api.codeclimate.com/v1/badges/43af030f43d5f3bc6a90/maintainability
 [maintainability-url]: https://codeclimate.com/github/klaasnicolaas/python-antwerpen/maintainability
 [project-stage-shield]: https://img.shields.io/badge/project%20stage-experimental-yellow.svg
 [pypi]: https://pypi.org/project/antwerpen/
