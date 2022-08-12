@@ -55,7 +55,7 @@ There are a number of parameters you can set to retrieve the data:
 | :------- | :--- | :---------- |
 | `entry_id` | string | The ID of this location |
 | `number` | string | The number of parking spots on this location |
-| `color` | string | The assigned color for this location |
+| `color` | string | Indicates how the location was created, **blue** means that the municipality has assigned this location and **white** has been requested by citizens. |
 | `address` | string | The address of this location |
 | `gis_id` | string | The GIS ID of this location |
 | `created` | datetime | The date this location was added to the dataset, not all locations have a value |
