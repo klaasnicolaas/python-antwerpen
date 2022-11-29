@@ -1,4 +1,5 @@
-## Python - ODP Antwerpen Client
+<!-- Banner -->
+![alt Banner of the odp antwerpen package](https://raw.githubusercontent.com/klaasnicolaas/python-antwerpen/main/assets/header_odp_antwerpen-min.png)
 
 <!-- PROJECT SHIELDS -->
 [![GitHub Release][releases-shield]][releases]
@@ -8,10 +9,10 @@
 [![License][license-shield]](LICENSE)
 
 [![GitHub Activity][commits-shield]][commits-url]
-[![Forks][forks-shield]][forks-url]
+[![PyPi Downloads][downloads-shield]][downloads-url]
+[![GitHub Last Commit][last-commit-shield]][commits-url]
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
-[![GitHub Last Commit][last-commit-shield]][commits-url]
 
 [![Code Quality][code-quality-shield]][code-quality]
 [![Maintainability][maintainability-shield]][maintainability-url]
@@ -145,6 +146,10 @@ To run just the Python tests:
 poetry run pytest
 ```
 
+## Credits
+
+Photo used in header was taken by [Bert Kaufmann](https://www.flickr.com/photos/22746515@N02/50497311187/in/photostream/).
+
 ## License
 
 MIT License
@@ -182,8 +187,8 @@ SOFTWARE.
 [commits-url]: https://github.com/klaasnicolaas/python-antwerpen/commits/main
 [codecov-shield]: https://codecov.io/gh/klaasnicolaas/python-antwerpen/branch/main/graph/badge.svg?token=LJULYJC8VT
 [codecov-url]: https://codecov.io/gh/klaasnicolaas/python-antwerpen
-[forks-shield]: https://img.shields.io/github/forks/klaasnicolaas/python-antwerpen.svg
-[forks-url]: https://github.com/klaasnicolaas/python-antwerpen/network/members
+[downloads-shield]: https://img.shields.io/pypi/dm/antwerpen
+[downloads-url]: https://pypistats.org/packages/antwerpen
 [issues-shield]: https://img.shields.io/github/issues/klaasnicolaas/python-antwerpen.svg
 [issues-url]: https://github.com/klaasnicolaas/python-antwerpen/issues
 [license-shield]: https://img.shields.io/github/license/klaasnicolaas/python-antwerpen.svg
