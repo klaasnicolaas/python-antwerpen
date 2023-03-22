@@ -154,7 +154,7 @@ Photo used in header was taken by [Bert Kaufmann](https://www.flickr.com/photos/
 
 MIT License
 
-Copyright (c) 2022 Klaas Schoute
+Copyright (c) 2022-2023 Klaas Schoute
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -193,7 +193,7 @@ SOFTWARE.
 [issues-url]: https://github.com/klaasnicolaas/python-antwerpen/issues
 [license-shield]: https://img.shields.io/github/license/klaasnicolaas/python-antwerpen.svg
 [last-commit-shield]: https://img.shields.io/github/last-commit/klaasnicolaas/python-antwerpen.svg
-[maintenance-shield]: https://img.shields.io/maintenance/yes/2022.svg
+[maintenance-shield]: https://img.shields.io/maintenance/yes/2023.svg
 [maintainability-shield]: https://api.codeclimate.com/v1/badges/43af030f43d5f3bc6a90/maintainability
 [maintainability-url]: https://codeclimate.com/github/klaasnicolaas/python-antwerpen/maintainability
 [project-stage-shield]: https://img.shields.io/badge/project%20stage-experimental-yellow.svg
