@@ -37,9 +37,9 @@ pip install antwerpen
 
 You can read the following datasets with this package:
 
-- [Disabled parking spaces / Minder valide parkings][disabled_parkings] (2280 locations)
+- [Disabled parking spaces / Minder valide parkings][disabled_parkings] (1677 locations)
 
-**Note**: even though the dataset indicates that there are 2280 records, the API appears to have a hard limit of 2000 records.
+**Note**: even though the dataset indicates that there are 1677 records, the API appears to have a hard limit of 1000 records.
 
 ---
 
@@ -54,14 +54,16 @@ There are a number of parameters you can set to retrieve the data:
 
 | Variable | Type | Description |
 | :------- | :--- | :---------- |
-| `entry_id` | string | The ID of this location |
-| `number` | string | The number of parking spots on this location |
-| `color` | string | Indicates how the location was created, **blue** means that the municipality has assigned this location and **white** has been requested by citizens. |
-| `address` | string | The address of this location |
+| `entry_id` | integer | The ID of this location |
+| `number` | integer | The number of parking spots on this location |
+| `orientation` | string | The orientation of this location |
+| `destination` | string | The destination of this location |
+| `window_time` | string (none) | The window time of this location |
+| `lined` | boolean | Whether this location is lined |
+| `status` | string | The status of this location |
 | `gis_id` | string | The GIS ID of this location |
-| `created` | datetime | The date this location was added to the dataset, not all locations have a value |
-| `longitude` | float | The longitude of this location |
-| `latitude` | float | The latitude of this location |
+| `created_at` | datetime | The date this location was added to the dataset, not all locations have a value |
+| `coordinates` | list (float) | The coordinates of this location |
 
 </details>
 
@@ -175,7 +177,7 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
 [api]: https://portaal-stadantwerpen.opendata.arcgis.com
-[disabled_parkings]: https://portaal-stadantwerpen.opendata.arcgis.com/datasets/stadAntwerpen::mindervalide-parkings/about
+[disabled_parkings]: https://portaal-stadantwerpen.opendata.arcgis.com/datasets/stadAntwerpen::parkeerplaatsen-voor-personen-met-een-handicap/about
 [nipkaart]: https://www.nipkaart.nl
 
 <!-- MARKDOWN LINKS & IMAGES -->

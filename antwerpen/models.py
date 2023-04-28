@@ -5,6 +5,8 @@ from dataclasses import dataclass
 from datetime import datetime
 from typing import Any
 
+import pytz
+
 
 @dataclass
 class DisabledParking:
@@ -12,35 +14,39 @@ class DisabledParking:
 
     entry_id: int
     number: int
-    color: str | None
-    address: str
+    orientation: str
+    destination: str
+    window_time: str | None
+    lined: bool
+    status: str
     gis_id: str
     created_at: datetime | None
-    longitude: float
-    latitude: float
+    coordinates: list[float]
 
     @classmethod
-    def from_dict(cls, data: dict[str, Any]) -> DisabledParking:
+    def from_dict(cls: type[DisabledParking], data: dict[str, Any]) -> DisabledParking:
         """Return a DisabledParking object from a dictionary.
 
         Args:
+        ----
             data: The data from the API.
 
         Returns:
+        -------
             A DisabledParking object.
         """
-
         attr = data["properties"]
-        geo = data["geometry"]["coordinates"]
         return cls(
             entry_id=attr.get("OBJECTID"),
-            number=attr.get("AANTAL_PLAATSEN"),
-            color=attr.get("KLEUR"),
-            address=attr.get("ADRES"),
+            number=attr.get("Capaciteit"),
+            orientation=attr.get("Orientatie"),
+            destination=attr.get("Bestemming"),
+            window_time=attr.get("VENSTERTIJD_BESCHR"),
+            lined=attr.get("GELIJND") == "Ja",
+            status=attr.get("STATUS"),
             gis_id=attr.get("GISID"),
-            created_at=fromtimestamp(attr.get("START_DATE")),
-            longitude=geo[0],
-            latitude=geo[1],
+            created_at=fromtimestamp(attr.get("EBDD")),
+            coordinates=data["geometry"]["coordinates"],
         )
 
 
@@ -48,13 +54,18 @@ def fromtimestamp(epoch_time: int, default: None = None) -> Any:
     """Fromtimestamp function with default value.
 
     Args:
+    ----
         epoch_time: The time in epoch format.
         default: The default value.
 
     Returns:
+    -------
         The datetime object.
     """
     try:
-        return datetime.fromtimestamp(epoch_time / 1000)
+        return datetime.fromtimestamp(
+            epoch_time / 1000,
+            tz=pytz.timezone("Europe/Brussels"),
+        )
     except (ValueError, TypeError):
         return default
