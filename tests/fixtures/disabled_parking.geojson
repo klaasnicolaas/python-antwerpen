@@ -9,202 +9,540 @@
     "features": [
         {
             "type": "Feature",
-            "id": 1714669,
+            "id": 42044,
             "geometry": {
-                "type": "Point",
+                "type": "Polygon",
                 "coordinates": [
-                    4.385669076816952,
-                    51.187002132837357
+                    [
+                        [
+                            4.3918232165230551,
+                            51.204380414721534
+                        ],
+                        [
+                            4.3918906554413546,
+                            51.204391667259358
+                        ],
+                        [
+                            4.3919206709145264,
+                            51.20439667495787
+                        ],
+                        [
+                            4.3919129101404417,
+                            51.204413466938526
+                        ],
+                        [
+                            4.3919126728662636,
+                            51.204413940677448
+                        ],
+                        [
+                            4.391815870951576,
+                            51.204397789063655
+                        ],
+                        [
+                            4.3918232165230551,
+                            51.204380414721534
+                        ]
+                    ]
                 ]
             },
             "properties": {
-                "OBJECTID": 1714669,
-                "AANTAL_PLAATSEN": 1,
-                "KLEUR": "blauw",
-                "JRNR_GR_CBS": null,
-                "ADRES": "Abdijstraat 180, 2020 Antwerpen",
-                "START_DATE": 1433462400000,
-                "GISID": "MVPL00001"
+                "OBJECTID": 42044,
+                "Opnamedatum": null,
+                "GISID": "GIS_J_4213",
+                "Bestemming": "mindervalide",
+                "Orientatie": "Langs",
+                "Capaciteit": 1,
+                "WEGID": 442513,
+                "WBNID": 384109,
+                "toegang": "Beperkt",
+                "AREAMANAGER": "1",
+                "STATUS": "actief",
+                "Venstertijd": null,
+                "EEDD": null,
+                "VENSTERTIJD_BESCHR": null,
+                "EBDD": 1657584000000,
+                "Belijnd": "nee",
+                "SHAPE_Length": 18.047819820912522,
+                "SHAPE_Area": 14.048263731179244
             }
         },
         {
             "type": "Feature",
-            "id": 1714670,
+            "id": 42045,
             "geometry": {
-                "type": "Point",
+                "type": "Polygon",
                 "coordinates": [
-                    4.3807072901780808,
-                    51.189320286688144
+                    [
+                        [
+                            4.4556751402688768,
+                            51.234930590188647
+                        ],
+                        [
+                            4.4556450476895346,
+                            51.234920763051001
+                        ],
+                        [
+                            4.4556914031167683,
+                            51.234864822120784
+                        ],
+                        [
+                            4.4557214942379861,
+                            51.234874649247921
+                        ],
+                        [
+                            4.4556751402688768,
+                            51.234930590188647
+                        ]
+                    ]
                 ]
             },
             "properties": {
-                "OBJECTID": 1714670,
-                "AANTAL_PLAATSEN": 1,
-                "KLEUR": "wit",
-                "JRNR_GR_CBS": null,
-                "ADRES": "Abdijstraat 65, 2020 Antwerpen",
-                "START_DATE": 1433462400000,
-                "GISID": "MVPL00003"
+                "OBJECTID": 42045,
+                "Opnamedatum": null,
+                "GISID": "GIS_102",
+                "Bestemming": "mindervalide",
+                "Orientatie": "Langs",
+                "Capaciteit": 1,
+                "WEGID": 449816,
+                "WBNID": 494926,
+                "toegang": "Beperkt",
+                "AREAMANAGER": "1",
+                "STATUS": "actief",
+                "Venstertijd": null,
+                "EEDD": null,
+                "VENSTERTIJD_BESCHR": null,
+                "EBDD": 1580947200000,
+                "Belijnd": "ja",
+                "SHAPE_Length": 18.769159247163042,
+                "SHAPE_Area": 16.620405177015325
             }
         },
         {
             "type": "Feature",
-            "id": 1714671,
+            "id": 42046,
             "geometry": {
-                "type": "Point",
+                "type": "Polygon",
                 "coordinates": [
-                    4.3840969861268642,
-                    51.187782052696718
+                    [
+                        [
+                            4.4260316846181436,
+                            51.215832316361848
+                        ],
+                        [
+                            4.4260038553871617,
+                            51.215843774044238
+                        ],
+                        [
+                            4.4259468309095977,
+                            51.215794697414388
+                        ],
+                        [
+                            4.4259733277135656,
+                            51.215782094376031
+                        ],
+                        [
+                            4.4260316846181436,
+                            51.215832316361848
+                        ]
+                    ]
                 ]
             },
             "properties": {
-                "OBJECTID": 1714671,
-                "AANTAL_PLAATSEN": 1,
-                "KLEUR": "wit",
-                "JRNR_GR_CBS": null,
-                "ADRES": "Abdijstraat 169, 2020 Antwerpen",
-                "START_DATE": 1433462400000,
-                "GISID": "MVPL00004"
+                "OBJECTID": 42046,
+                "Opnamedatum": null,
+                "GISID": "GIS_103",
+                "Bestemming": "mindervalide",
+                "Orientatie": "Langs",
+                "Capaciteit": 1,
+                "WEGID": 421349,
+                "WBNID": 361983,
+                "toegang": "Beperkt",
+                "AREAMANAGER": "1",
+                "STATUS": "actief",
+                "Venstertijd": null,
+                "EEDD": null,
+                "VENSTERTIJD_BESCHR": null,
+                "EBDD": 1575936000000,
+                "Belijnd": "ja",
+                "SHAPE_Length": 18.323833072454679,
+                "SHAPE_Area": 15.87898473097345
             }
         },
         {
             "type": "Feature",
-            "id": 1714672,
+            "id": 42047,
             "geometry": {
-                "type": "Point",
+                "type": "Polygon",
                 "coordinates": [
-                    4.4419566820726599,
-                    51.259115144516343
+                    [
+                        [
+                            4.4077970933008155,
+                            51.202803523624503
+                        ],
+                        [
+                            4.4078555624103997,
+                            51.202854508915287
+                        ],
+                        [
+                            4.4078323456085098,
+                            51.20286501703832
+                        ],
+                        [
+                            4.4077742788582679,
+                            51.202814383948372
+                        ],
+                        [
+                            4.4077970933008155,
+                            51.202803523624503
+                        ]
+                    ]
                 ]
             },
             "properties": {
-                "OBJECTID": 1714672,
-                "AANTAL_PLAATSEN": 1,
-                "KLEUR": "wit",
-                "JRNR_GR_CBS": null,
-                "ADRES": "Adelaarstraat 52, 2170 Merksem",
-                "START_DATE": 1433462400000,
-                "GISID": "MVPL00005"
+                "OBJECTID": 42047,
+                "Opnamedatum": null,
+                "GISID": "GIS_109",
+                "Bestemming": "mindervalide",
+                "Orientatie": "Langs",
+                "Capaciteit": 1,
+                "WEGID": 425379,
+                "WBNID": 366181,
+                "toegang": "Beperkt",
+                "AREAMANAGER": "1",
+                "STATUS": "actief",
+                "Venstertijd": null,
+                "EEDD": null,
+                "VENSTERTIJD_BESCHR": null,
+                "EBDD": 1580256000000,
+                "Belijnd": "ja",
+                "SHAPE_Length": 17.934457124943723,
+                "SHAPE_Area": 13.93384054236353
             }
         },
         {
             "type": "Feature",
-            "id": 1714673,
+            "id": 42048,
             "geometry": {
-                "type": "Point",
+                "type": "Polygon",
                 "coordinates": [
-                    4.4049674738537519,
-                    51.227525835021325
+                    [
+                        [
+                            4.3804290258189136,
+                            51.225685850188903
+                        ],
+                        [
+                            4.3803497853864561,
+                            51.225686962223691
+                        ],
+                        [
+                            4.3803490956582296,
+                            51.225666162309579
+                        ],
+                        [
+                            4.3803490538075245,
+                            51.225664880572438
+                        ],
+                        [
+                            4.3804283858068596,
+                            51.225663730777406
+                        ],
+                        [
+                            4.3804284175902364,
+                            51.225664827355182
+                        ],
+                        [
+                            4.3804290258189136,
+                            51.225685850188903
+                        ]
+                    ]
                 ]
             },
             "properties": {
-                "OBJECTID": 1714673,
-                "AANTAL_PLAATSEN": 1,
-                "KLEUR": "wit",
-                "JRNR_GR_CBS": null,
-                "ADRES": "Adriaan Brouwerstraat 33, 2000 Antwerpen",
-                "START_DATE": 1433462400000,
-                "GISID": "MVPL00007"
+                "OBJECTID": 42048,
+                "Opnamedatum": null,
+                "GISID": "GIS_110",
+                "Bestemming": "mindervalide",
+                "Orientatie": "Dwars",
+                "Capaciteit": 1,
+                "WEGID": 541994,
+                "WBNID": 486167,
+                "toegang": "Beperkt",
+                "AREAMANAGER": "1",
+                "STATUS": "actief",
+                "Venstertijd": null,
+                "EEDD": null,
+                "VENSTERTIJD_BESCHR": null,
+                "EBDD": 1565308800000,
+                "Belijnd": "ja",
+                "SHAPE_Length": 15.998938696906531,
+                "SHAPE_Area": 13.624791578497799
             }
         },
         {
             "type": "Feature",
-            "id": 1714674,
+            "id": 42049,
             "geometry": {
-                "type": "Point",
+                "type": "Polygon",
                 "coordinates": [
-                    4.4189495073357765,
-                    51.200761202817759
+                    [
+                        [
+                            4.380429665828582,
+                            51.225707957915311
+                        ],
+                        [
+                            4.380350519835611,
+                            51.225709069041891
+                        ],
+                        [
+                            4.3803497853864561,
+                            51.225686962223691
+                        ],
+                        [
+                            4.3804290258189136,
+                            51.225685850188903
+                        ],
+                        [
+                            4.380429665828582,
+                            51.225707957915311
+                        ]
+                    ]
                 ]
             },
             "properties": {
-                "OBJECTID": 1714674,
-                "AANTAL_PLAATSEN": 1,
-                "KLEUR": "blauw",
-                "JRNR_GR_CBS": null,
-                "ADRES": "Albert Grisarstraat 58, 2018 Antwerpen",
-                "START_DATE": 1433462400000,
-                "GISID": "MVPL00008"
+                "OBJECTID": 42049,
+                "Opnamedatum": null,
+                "GISID": "GIS_111",
+                "Bestemming": "mindervalide",
+                "Orientatie": "Dwars",
+                "Capaciteit": 1,
+                "WEGID": 541994,
+                "WBNID": 486167,
+                "toegang": "Beperkt",
+                "AREAMANAGER": "1",
+                "STATUS": "actief",
+                "Venstertijd": null,
+                "EEDD": null,
+                "VENSTERTIJD_BESCHR": null,
+                "EBDD": 1565308800000,
+                "Belijnd": "ja",
+                "SHAPE_Length": 15.98734878127749,
+                "SHAPE_Area": 13.612811365967961
             }
         },
         {
             "type": "Feature",
-            "id": 1714675,
+            "id": 42050,
             "geometry": {
-                "type": "Point",
+                "type": "Polygon",
                 "coordinates": [
-                    4.4189872174975653,
-                    51.200701771063656
+                    [
+                        [
+                            4.4491467912859957,
+                            51.229052342612214
+                        ],
+                        [
+                            4.4492125331330987,
+                            51.229007611870834
+                        ],
+                        [
+                            4.4492337983239221,
+                            51.229019429556871
+                        ],
+                        [
+                            4.4491680836492931,
+                            51.229064142314563
+                        ],
+                        [
+                            4.4491467912859957,
+                            51.229052342612214
+                        ]
+                    ]
                 ]
             },
             "properties": {
-                "OBJECTID": 1714675,
-                "AANTAL_PLAATSEN": 1,
-                "KLEUR": "blauw",
-                "JRNR_GR_CBS": null,
-                "ADRES": "Albert Grisarstraat 60, 2018 Antwerpen",
-                "START_DATE": 1433462400000,
-                "GISID": "MVPL00009"
+                "OBJECTID": 42050,
+                "Opnamedatum": null,
+                "GISID": "GIS_113",
+                "Bestemming": "mindervalide",
+                "Orientatie": "Langs",
+                "Capaciteit": 1,
+                "WEGID": 449848,
+                "WBNID": 391292,
+                "toegang": "Beperkt",
+                "AREAMANAGER": "1",
+                "STATUS": "actief",
+                "Venstertijd": null,
+                "EEDD": null,
+                "VENSTERTIJD_BESCHR": null,
+                "EBDD": 1581033600000,
+                "Belijnd": "ja",
+                "SHAPE_Length": 17.508001181905179,
+                "SHAPE_Area": 13.427508918802832
             }
         },
         {
             "type": "Feature",
-            "id": 1714676,
+            "id": 42051,
             "geometry": {
-                "type": "Point",
+                "type": "Polygon",
                 "coordinates": [
-                    4.4443420273266421,
-                    51.218163697670896
+                    [
+                        [
+                            4.4196029877203138,
+                            51.228704999836886
+                        ],
+                        [
+                            4.4196271462019476,
+                            51.228695344793614
+                        ],
+                        [
+                            4.4196800526638338,
+                            51.228749659946928
+                        ],
+                        [
+                            4.4196556290202427,
+                            51.228759040072667
+                        ],
+                        [
+                            4.419655318016714,
+                            51.228758721121551
+                        ],
+                        [
+                            4.4196029877203138,
+                            51.228704999836886
+                        ]
+                    ]
                 ]
             },
             "properties": {
-                "OBJECTID": 1714676,
-                "AANTAL_PLAATSEN": 1,
-                "KLEUR": "wit",
-                "JRNR_GR_CBS": "2014_11315",
-                "ADRES": "Albrecht Rodenbachstraat 8, 2140 Borgerhout",
-                "START_DATE": 1433462400000,
-                "GISID": "MVPL00010"
+                "OBJECTID": 42051,
+                "Opnamedatum": null,
+                "GISID": "GIS_1132",
+                "Bestemming": "mindervalide",
+                "Orientatie": "Langs",
+                "Capaciteit": 1,
+                "WEGID": 424558,
+                "WBNID": 365074,
+                "toegang": "Beperkt",
+                "AREAMANAGER": "1",
+                "STATUS": "actief",
+                "Venstertijd": null,
+                "EEDD": null,
+                "VENSTERTIJD_BESCHR": null,
+                "EBDD": 1569801600000,
+                "Belijnd": "ja",
+                "SHAPE_Length": 18.131331412819964,
+                "SHAPE_Area": 14.131176901450861
             }
         },
         {
             "type": "Feature",
-            "id": 1714677,
+            "id": 42052,
             "geometry": {
-                "type": "Point",
+                "type": "Polygon",
                 "coordinates": [
-                    4.4443314853083908,
-                    51.218214772968047
+                    [
+                        [
+                            4.4204494665632961,
+                            51.229550742572265
+                        ],
+                        [
+                            4.4204735923520264,
+                            51.229541061307643
+                        ],
+                        [
+                            4.420515977169261,
+                            51.229582712541252
+                        ],
+                        [
+                            4.4204918356031051,
+                            51.229592378541142
+                        ],
+                        [
+                            4.4204494665632961,
+                            51.229550742572265
+                        ]
+                    ]
                 ]
             },
             "properties": {
-                "OBJECTID": 1714677,
-                "AANTAL_PLAATSEN": 1,
-                "KLEUR": "wit",
-                "JRNR_GR_CBS": "2014_11315",
-                "ADRES": "Albrecht Rodenbachstraat 10, 2140 Borgerhout",
-                "START_DATE": 1433462400000,
-                "GISID": "MVPL00011"
+                "OBJECTID": 42052,
+                "Opnamedatum": null,
+                "GISID": "GIS_1138",
+                "Bestemming": "mindervalide",
+                "Orientatie": "Langs",
+                "Capaciteit": 1,
+                "WEGID": 463490,
+                "WBNID": 364413,
+                "toegang": "Beperkt",
+                "AREAMANAGER": "1",
+                "STATUS": "actief",
+                "Venstertijd": null,
+                "EEDD": null,
+                "VENSTERTIJD_BESCHR": null,
+                "EBDD": 1569801600000,
+                "Belijnd": "nee",
+                "SHAPE_Length": 14.996014630842303,
+                "SHAPE_Area": 10.996173833560984
             }
         },
         {
             "type": "Feature",
-            "id": 1714678,
+            "id": 42053,
             "geometry": {
-                "type": "Point",
+                "type": "Polygon",
                 "coordinates": [
-                    4.4764001134193672,
-                    51.222932656100696
+                    [
+                        [
+                            4.4204994787502532,
+                            51.229599890318042
+                        ],
+                        [
+                            4.4204918370347235,
+                            51.229592378540517
+                        ],
+                        [
+                            4.420515977169261,
+                            51.229582712541252
+                        ],
+                        [
+                            4.4205237865666884,
+                            51.229590386932131
+                        ],
+                        [
+                            4.4205582230457416,
+                            51.22962422899532
+                        ],
+                        [
+                            4.4205340943653804,
+                            51.229633907581686
+                        ],
+                        [
+                            4.4204994787502532,
+                            51.229599890318042
+                        ]
+                    ]
                 ]
             },
             "properties": {
-                "OBJECTID": 1714678,
-                "AANTAL_PLAATSEN": 1,
-                "KLEUR": "wit",
-                "JRNR_GR_CBS": null,
-                "ADRES": "Alfons Schneiderlaan 69, 2100 Deurne",
-                "START_DATE": null,
-                "GISID": "MVPL00012"
+                "OBJECTID": 42053,
+                "Opnamedatum": null,
+                "GISID": "GIS_1139",
+                "Bestemming": "mindervalide",
+                "Orientatie": "Langs",
+                "Capaciteit": 1,
+                "WEGID": 463490,
+                "WBNID": 364413,
+                "toegang": "Beperkt",
+                "AREAMANAGER": "1",
+                "STATUS": "actief",
+                "Venstertijd": null,
+                "EEDD": null,
+                "VENSTERTIJD_BESCHR": null,
+                "EBDD": null,
+                "Belijnd": "nee",
+                "SHAPE_Length": 14.96384738586325,
+                "SHAPE_Area": 10.964189268462977
             }
         }
     ],

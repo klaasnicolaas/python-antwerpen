@@ -7,9 +7,9 @@ from dataclasses import dataclass
 from importlib import metadata
 from typing import Any
 
-import aiohttp
 import async_timeout
-from aiohttp import hdrs
+from aiohttp import ClientError, ClientSession
+from aiohttp.hdrs import METH_GET
 from yarl import URL
 
 from .exceptions import ODPAntwerpenConnectionError, ODPAntwerpenError
@@ -21,7 +21,7 @@ class ODPAntwerpen:
     """Main class for handling data fetchting from Open Data Platform of Antwerpen."""
 
     request_timeout: float = 10.0
-    session: aiohttp.client.ClientSession | None = None
+    session: ClientSession | None = None
 
     _close_session: bool = False
 
@@ -29,21 +29,24 @@ class ODPAntwerpen:
         self,
         uri: str,
         *,
-        method: str = hdrs.METH_GET,
+        method: str = METH_GET,
         params: dict[str, Any] | None = None,
     ) -> Any:
         """Handle a request to the Open Data Platform API of Antwerpen.
 
         Args:
+        ----
             uri: Request URI, without '/', for example, 'status'
             method: HTTP method to use, for example, 'GET'
             params: Extra options to improve or limit the response.
 
         Returns:
+        -------
             A Python dictionary (text) with the response from
             the Open Data Platform API.
 
         Raises:
+        ------
             ODPAntwerpenConnectionError: Timeout occurred while
                 connecting to the Open Data Platform API.
             ODPAntwerpenError: If the data is not valid.
@@ -61,7 +64,7 @@ class ODPAntwerpen:
         }
 
         if self.session is None:
-            self.session = aiohttp.ClientSession()
+            self.session = ClientSession()
             self._close_session = True
 
         try:
@@ -75,19 +78,18 @@ class ODPAntwerpen:
                 )
                 response.raise_for_status()
         except asyncio.TimeoutError as exception:
-            raise ODPAntwerpenConnectionError(
-                "Timeout occurred while connecting to the Open Data Platform API."
-            ) from exception
-        except (aiohttp.ClientError, socket.gaierror) as exception:
-            raise ODPAntwerpenConnectionError(
-                "Error occurred while communicating with Open Data Platform API."
-            ) from exception
+            msg = "Timeout occurred while connecting to the Open Data Platform API."
+            raise ODPAntwerpenConnectionError(msg) from exception
+        except (ClientError, socket.gaierror) as exception:
+            msg = "Error occurred while communicating with Open Data Platform API."
+            raise ODPAntwerpenConnectionError(msg) from exception
 
         content_type = response.headers.get("Content-Type", "")
         if "application/geo+json" not in content_type:
             text = await response.text()
+            msg = "Unexpected content type response from the Open Data Platform API."
             raise ODPAntwerpenError(
-                "Unexpected content type response from the Open Data Platform API",
+                msg,
                 {"Content-Type": content_type, "Response": text},
             )
 
@@ -97,12 +99,13 @@ class ODPAntwerpen:
         """Get all disabled parking spaces.
 
         Args:
+        ----
             limit: Number of items to return.
 
         Returns:
+        -------
             A list of DisabledParking objects.
         """
-
         results: list[DisabledParking] = []
         locations = await self._request(
             "portal_publiek6/MapServer/585/query",
@@ -126,7 +129,8 @@ class ODPAntwerpen:
     async def __aenter__(self) -> ODPAntwerpen:
         """Async enter.
 
-        Returns:
+        Returns
+        -------
             The Open Data Platform object.
         """
         return self
@@ -135,6 +139,7 @@ class ODPAntwerpen:
         """Async exit.
 
         Args:
+        ----
             _exc_info: Exec type.
         """
         await self.close()
