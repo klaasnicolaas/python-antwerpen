@@ -11,20 +11,16 @@ async def main() -> None:
     async with ODPAntwerpen() as client:
         disabled_parkings = await client.disabled_parkings(limit=100)
 
-        count: int
-        for index, item in enumerate(disabled_parkings, 1):
-            count = index
+        count = len(disabled_parkings)
+        for item in disabled_parkings:
             print(item)
 
         # Count unique id's in disabled_parkings
-        unique_values: list[int] = []
-        for item in disabled_parkings:
-            unique_values.append(item.entry_id)
-        num_values = len(set(unique_values))
+        unique_values = len({item.entry_id for item in disabled_parkings})
 
         print("__________________________")
         print(f"Total locations found: {count}")
-        print(f"Unique ID values: {num_values}")
+        print(f"Unique ID values: {unique_values}")
 
 
 if __name__ == "__main__":
