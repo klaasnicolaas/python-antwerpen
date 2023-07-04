@@ -106,7 +106,6 @@ class ODPAntwerpen:
         -------
             A list of DisabledParking objects.
         """
-        results: list[DisabledParking] = []
         locations = await self._request(
             "portal_publiek6/MapServer/585/query",
             params={
@@ -116,10 +115,7 @@ class ODPAntwerpen:
                 "f": "geojson",
             },
         )
-
-        for item in locations["features"]:
-            results.append(DisabledParking.from_dict(item))
-        return results
+        return [DisabledParking.from_dict(item) for item in locations["features"]]
 
     async def close(self) -> None:
         """Close open client session."""
