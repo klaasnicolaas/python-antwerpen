@@ -9,16 +9,21 @@ from . import load_fixtures
 
 async def test_all_disabled_parking_spaces(aresponses: ResponsesMockServer) -> None:
     """Test all disabled parking spaces function."""
-    aresponses.add(
-        "geodata.antwerpen.be",
-        "/arcgissql/rest/services/P_Portal/portal_publiek6/MapServer/585/query",
-        "GET",
-        aresponses.Response(
-            status=200,
-            headers={"Content-Type": "application/geo+json"},
-            text=load_fixtures("disabled_parking.geojson"),
-        ),
-    )
+    datasets: list[str] = [
+        "disabled_parking.geojson",
+        "disabled_parking.geojson",
+    ]
+    for dataset in datasets:
+        aresponses.add(
+            "geodata.antwerpen.be",
+            "/arcgissql/rest/services/P_Portal/portal_publiek6/MapServer/585/query",
+            "GET",
+            aresponses.Response(
+                status=200,
+                headers={"Content-Type": "application/geo+json"},
+                text=load_fixtures(dataset),
+            ),
+        )
     async with ClientSession() as session:
         client = ODPAntwerpen(session=session)
         spaces: list[DisabledParking] = await client.disabled_parkings()

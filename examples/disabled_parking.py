@@ -9,7 +9,7 @@ from antwerpen import ODPAntwerpen
 async def main() -> None:
     """Show example on using the Antwerpen API client."""
     async with ODPAntwerpen() as client:
-        disabled_parkings = await client.disabled_parkings(limit=100)
+        disabled_parkings = await client.disabled_parkings(limit=200)
 
         count = len(disabled_parkings)
         for item in disabled_parkings:

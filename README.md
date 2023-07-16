@@ -36,9 +36,7 @@ pip install antwerpen
 
 You can read the following datasets with this package:
 
-- [Disabled parking spaces / Minder valide parkings][disabled_parkings] (1677 locations)
-
-**Note**: even though the dataset indicates that there are 1677 records, the API appears to have a hard limit of 1000 records.
+- [Disabled parking spaces / Parkeerplaatsen voor personen met een handicap][disabled_parkings] (1666 locations)
 
 ---
 
