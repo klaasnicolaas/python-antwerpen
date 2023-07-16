@@ -106,16 +106,20 @@ class ODPAntwerpen:
         -------
             A list of DisabledParking objects.
         """
-        locations = await self._request(
-            "portal_publiek6/MapServer/585/query",
-            params={
-                "where": "1=1",
-                "resultRecordCount": limit,
-                "outFields": "*",
-                "f": "geojson",
-            },
-        )
-        return [DisabledParking.from_dict(item) for item in locations["features"]]
+        results: list[DisabledParking] = []
+        for offset in [0, 1000]:
+            locations = await self._request(
+                "portal_publiek6/MapServer/585/query",
+                params={
+                    "where": "1=1",
+                    "resultOffset": offset,
+                    "outFields": "*",
+                    "f": "geojson",
+                },
+            )
+            for location in locations["features"]:
+                results.append(DisabledParking.from_dict(location))  # noqa: PERF401
+        return results[:limit]
 
     async def close(self) -> None:
         """Close open client session."""
