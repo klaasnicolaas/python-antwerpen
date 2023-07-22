@@ -36,7 +36,7 @@ pip install antwerpen
 
 You can read the following datasets with this package:
 
-- [Disabled parking spaces / Parkeerplaatsen voor personen met een handicap][disabled_parkings] (1666 locations)
+- [Disabled parking spaces / Parkeerplaatsen voor personen met een handicap][disabled_parkings] (1664 locations)
 
 ---
 
@@ -54,7 +54,7 @@ There are a number of parameters you can set to retrieve the data:
 | `entry_id` | integer | The ID of this location |
 | `number` | integer | The number of parking spots on this location |
 | `orientation` | string | The orientation of this location |
-| `destination` | string | The destination of this location |
+| `destiny` | string | What is the purpose of the location |
 | `window_time` | string (none) | The window time of this location |
 | `lined` | boolean | Whether this location is lined |
 | `status` | string | The status of this location |
