@@ -15,7 +15,7 @@ class DisabledParking:
     entry_id: int
     number: int
     orientation: str
-    destination: str
+    destiny: str
     window_time: str | None
     lined: bool
     status: str
@@ -40,7 +40,7 @@ class DisabledParking:
             entry_id=attr.get("OBJECTID"),
             number=attr.get("Capaciteit"),
             orientation=attr.get("Orientatie"),
-            destination=attr.get("Bestemming"),
+            destiny=attr.get("Bestemming"),
             window_time=attr.get("VENSTERTIJD_BESCHR"),
             lined=attr.get("GELIJND") == "Ja",
             status=attr.get("STATUS"),
