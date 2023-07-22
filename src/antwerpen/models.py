@@ -46,7 +46,7 @@ class DisabledParking:
             status=attr.get("STATUS"),
             gis_id=attr.get("GISID"),
             created_at=fromtimestamp(attr.get("EBDD")),
-            coordinates=data["geometry"]["coordinates"],
+            coordinates=data["geometry"]["coordinates"][0],
         )
 
 
