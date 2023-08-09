@@ -5,7 +5,7 @@ import asyncio
 import socket
 from dataclasses import dataclass
 from importlib import metadata
-from typing import Any
+from typing import TYPE_CHECKING, Any
 
 import async_timeout
 from aiohttp import ClientError, ClientSession
@@ -14,6 +14,9 @@ from yarl import URL
 
 from .exceptions import ODPAntwerpenConnectionError, ODPAntwerpenError
 from .models import DisabledParking
+
+if TYPE_CHECKING:
+    from typing_extensions import Self
 
 
 @dataclass
@@ -126,7 +129,7 @@ class ODPAntwerpen:
         if self.session and self._close_session:
             await self.session.close()
 
-    async def __aenter__(self) -> ODPAntwerpen:
+    async def __aenter__(self) -> Self:
         """Async enter.
 
         Returns
@@ -135,7 +138,7 @@ class ODPAntwerpen:
         """
         return self
 
-    async def __aexit__(self, *_exc_info: str) -> None:
+    async def __aexit__(self, *_exc_info: object) -> None:
         """Async exit.
 
         Args:
