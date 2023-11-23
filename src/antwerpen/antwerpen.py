@@ -5,18 +5,14 @@ import asyncio
 import socket
 from dataclasses import dataclass
 from importlib import metadata
-from typing import TYPE_CHECKING, Any
+from typing import Any, Self
 
-import async_timeout
 from aiohttp import ClientError, ClientSession
 from aiohttp.hdrs import METH_GET
 from yarl import URL
 
 from .exceptions import ODPAntwerpenConnectionError, ODPAntwerpenError
 from .models import DisabledParking
-
-if TYPE_CHECKING:
-    from typing_extensions import Self
 
 
 @dataclass
@@ -71,7 +67,7 @@ class ODPAntwerpen:
             self._close_session = True
 
         try:
-            async with async_timeout.timeout(self.request_timeout):
+            async with asyncio.timeout(self.request_timeout):
                 response = await self.session.request(
                     method,
                     url,
