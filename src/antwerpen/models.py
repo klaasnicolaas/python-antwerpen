@@ -34,6 +34,7 @@ class DisabledParking:
         Returns:
         -------
             A DisabledParking object.
+
         """
         attr = data["properties"]
         return cls(
@@ -61,6 +62,7 @@ def fromtimestamp(epoch_time: int, default: None = None) -> Any:
     Returns:
     -------
         The datetime object.
+
     """
     try:
         return datetime.fromtimestamp(
