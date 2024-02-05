@@ -11,6 +11,7 @@ repository = "https://github.com/klaasnicolaas/python-antwerpen"
 documentation = "https://github.com/klaasnicolaas/python-antwerpen"
 keywords = ["open", "data", "platform", "antwerpen", "parking", "api", "async", "client"]
 classifiers = [
+  "Development Status :: 5 - Production/Stable",
   "Framework :: AsyncIO",
   "Intended Audience :: Developers",
   "License :: OSI Approved :: MIT License",
