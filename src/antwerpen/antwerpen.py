@@ -49,6 +49,7 @@ class ODPAntwerpen:
             ODPAntwerpenConnectionError: Timeout occurred while
                 connecting to the Open Data Platform API.
             ODPAntwerpenError: If the data is not valid.
+
         """
         version = metadata.version(__package__)
         url = URL.build(
@@ -104,6 +105,7 @@ class ODPAntwerpen:
         Returns:
         -------
             A list of DisabledParking objects.
+
         """
         results: list[DisabledParking] = []
         for offset in [0, 1000]:
@@ -131,6 +133,7 @@ class ODPAntwerpen:
         Returns
         -------
             The Open Data Platform object.
+
         """
         return self
 
@@ -140,5 +143,6 @@ class ODPAntwerpen:
         Args:
         ----
             _exc_info: Exec type.
+
         """
         await self.close()
