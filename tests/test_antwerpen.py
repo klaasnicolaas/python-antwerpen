@@ -14,7 +14,10 @@ from antwerpen.exceptions import ODPAntwerpenConnectionError, ODPAntwerpenError
 from . import load_fixtures
 
 
-async def test_json_request(aresponses: ResponsesMockServer) -> None:
+async def test_json_request(
+    aresponses: ResponsesMockServer,
+    odp_antwerpen_client: ODPAntwerpen,
+) -> None:
     """Test JSON response is handled correctly."""
     aresponses.add(
         "geodata.antwerpen.be",
@@ -26,11 +29,9 @@ async def test_json_request(aresponses: ResponsesMockServer) -> None:
             text=load_fixtures("disabled_parking.geojson"),
         ),
     )
-    async with ClientSession() as session:
-        client = ODPAntwerpen(session=session)
-        response = await client._request("test")
-        assert response is not None
-        await client.close()
+    response = await odp_antwerpen_client._request("test")
+    assert response is not None
+    await odp_antwerpen_client.close()
 
 
 async def test_internal_session(aresponses: ResponsesMockServer) -> None:
@@ -68,15 +69,15 @@ async def test_timeout(aresponses: ResponsesMockServer) -> None:
     )
 
     async with ClientSession() as session:
-        client = ODPAntwerpen(
-            session=session,
-            request_timeout=0.1,
-        )
+        client = ODPAntwerpen(session=session, request_timeout=0.1)
         with pytest.raises(ODPAntwerpenConnectionError):
             assert await client._request("test")
 
 
-async def test_content_type(aresponses: ResponsesMockServer) -> None:
+async def test_content_type(
+    aresponses: ResponsesMockServer,
+    odp_antwerpen_client: ODPAntwerpen,
+) -> None:
     """Test request content type error from Open Data Platform API of Antwerpen."""
     aresponses.add(
         "geodata.antwerpen.be",
@@ -87,11 +88,8 @@ async def test_content_type(aresponses: ResponsesMockServer) -> None:
             headers={"Content-Type": "blabla/blabla"},
         ),
     )
-
-    async with ClientSession() as session:
-        client = ODPAntwerpen(session=session)
-        with pytest.raises(ODPAntwerpenError):
-            assert await client._request("test")
+    with pytest.raises(ODPAntwerpenError):
+        assert await odp_antwerpen_client._request("test")
 
 
 async def test_client_error() -> None:

@@ -2,15 +2,22 @@
 
 from __future__ import annotations
 
-from aiohttp import ClientSession
-from aresponses import ResponsesMockServer
+from typing import TYPE_CHECKING
 
-from antwerpen import DisabledParking, ODPAntwerpen
+from aresponses import ResponsesMockServer
+from syrupy.assertion import SnapshotAssertion
 
 from . import load_fixtures
 
+if TYPE_CHECKING:
+    from antwerpen import DisabledParking, ODPAntwerpen
 
-async def test_all_disabled_parking_spaces(aresponses: ResponsesMockServer) -> None:
+
+async def test_all_disabled_parking_spaces(
+    aresponses: ResponsesMockServer,
+    snapshot: SnapshotAssertion,
+    odp_antwerpen_client: ODPAntwerpen,
+) -> None:
     """Test all disabled parking spaces function."""
     datasets: list[str] = [
         "disabled_parking.geojson",
@@ -27,12 +34,5 @@ async def test_all_disabled_parking_spaces(aresponses: ResponsesMockServer) -> N
                 text=load_fixtures(dataset),
             ),
         )
-    async with ClientSession() as session:
-        client = ODPAntwerpen(session=session)
-        spaces: list[DisabledParking] = await client.disabled_parkings()
-        assert spaces is not None
-        for item in spaces:
-            assert isinstance(item, DisabledParking)
-            assert item.entry_id is not None
-            assert item.coordinates is not None
-            assert isinstance(item.coordinates, list)
+    spaces: list[DisabledParking] = await odp_antwerpen_client.disabled_parkings()
+    assert spaces == snapshot
