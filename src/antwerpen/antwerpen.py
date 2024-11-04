@@ -15,6 +15,8 @@ from yarl import URL
 from .exceptions import ODPAntwerpenConnectionError, ODPAntwerpenError
 from .models import DisabledParking
 
+VERSION = metadata.version(__package__)
+
 
 @dataclass
 class ODPAntwerpen:
@@ -52,7 +54,6 @@ class ODPAntwerpen:
             ODPAntwerpenError: If the data is not valid.
 
         """
-        version = metadata.version(__package__)
         url = URL.build(
             scheme="https",
             host="geodata.antwerpen.be",
@@ -61,7 +62,7 @@ class ODPAntwerpen:
 
         headers = {
             "Accept": "application/geo+json",
-            "User-Agent": f"PythonODPAntwerpen/{version}",
+            "User-Agent": f"PythonODPAntwerpen/{VERSION}",
         }
 
         if self.session is None:
