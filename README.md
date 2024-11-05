@@ -155,10 +155,6 @@ To update the [syrupy](https://github.com/tophat/syrupy) snapshot tests:
 poetry run pytest --snapshot-update
 ```
 
-## Credits
-
-Photo used in header was taken by [Bert Kaufmann](https://www.flickr.com/photos/22746515@N02/50497311187/in/photostream/).
-
 ## License
 
 MIT License
