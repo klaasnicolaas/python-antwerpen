@@ -5,8 +5,8 @@ from .exceptions import ODPAntwerpenConnectionError, ODPAntwerpenError
 from .models import DisabledParking
 
 __all__ = [
+    "DisabledParking",
     "ODPAntwerpen",
     "ODPAntwerpenConnectionError",
     "ODPAntwerpenError",
-    "DisabledParking",
 ]
