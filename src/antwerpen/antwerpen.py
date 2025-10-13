@@ -82,7 +82,6 @@ class ODPAntwerpen:
         except asyncio.TimeoutError as exception:
             msg = "Timeout occurred while connecting to the Open Data Platform API."
             raise ODPAntwerpenConnectionError(msg) from exception
-
         except (ClientError, socket.gaierror) as exception:
             msg = "Error occurred while communicating with Open Data Platform API."
             raise ODPAntwerpenConnectionError(msg) from exception
