@@ -79,7 +79,7 @@ class ODPAntwerpen:
                     ssl=True,
                 )
                 response.raise_for_status()
-        except asyncio.TimeoutError as exception:
+        except asyncio.TimeoutError as exception:   # noqa: UP041
             msg = "Timeout occurred while connecting to the Open Data Platform API."
             raise ODPAntwerpenConnectionError(msg) from exception
         except (ClientError, socket.gaierror) as exception:
