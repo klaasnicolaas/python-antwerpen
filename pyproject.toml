@@ -24,7 +24,7 @@ classifiers = [
 dependencies = [
   "aiohttp>=3.0.0",
   "yarl>=1.6.0",
-  "pytz>=2023.3,<2024.0.0",
+  "pytz>=2026.3,<2026.4",
 ]
 
 [tool.poetry]
