@@ -24,7 +24,6 @@ classifiers = [
 dependencies = [
   "aiohttp>=3.0.0",
   "yarl>=1.6.0",
-  "pytz>=2022.7.1,<2027",
 ]
 
 [project.urls]
@@ -48,7 +47,6 @@ dev = [
   "ruff==0.17.0",
   "syrupy==6.1.1",
   "ty==0.0.86",
-  "types-pytz==2026.5.0.20261006",
   "yamllint==1.38.0",
   "zizmor==1.30.1",
 ]

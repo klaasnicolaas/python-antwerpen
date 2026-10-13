@@ -5,8 +5,7 @@ from __future__ import annotations
 from dataclasses import dataclass
 from datetime import datetime
 from typing import Any
-
-import pytz
+from zoneinfo import ZoneInfo
 
 
 @dataclass
@@ -68,7 +67,7 @@ def fromtimestamp(epoch_time: int, default: None = None) -> Any:
     try:
         return datetime.fromtimestamp(
             epoch_time / 1000,
-            tz=pytz.timezone("Europe/Brussels"),
+            tz=ZoneInfo("Europe/Brussels"),
         )
     except (ValueError, TypeError):
         return default
