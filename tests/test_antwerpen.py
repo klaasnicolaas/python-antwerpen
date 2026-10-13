@@ -104,3 +104,20 @@ async def test_client_error() -> None:
             pytest.raises(ODPAntwerpenConnectionError),
         ):
             assert await client._request("test")
+
+
+@pytest.mark.parametrize("body", ["not json", "[]", '{"error": {"code": 500}}'])
+async def test_invalid_json(
+    aresponses: ResponsesMockServer, odp_antwerpen_client: ODPAntwerpen, body: str
+) -> None:
+    """Reject malformed JSON and ArcGIS errors returned with HTTP 200."""
+    aresponses.add(
+        "geodata.antwerpen.be",
+        "/arcgissql/rest/services/P_Portal/test",
+        "GET",
+        aresponses.Response(
+            status=200, headers={"Content-Type": "application/json"}, text=body
+        ),
+    )
+    with pytest.raises(ODPAntwerpenError):
+        await odp_antwerpen_client._request("test")

@@ -5,8 +5,7 @@ from __future__ import annotations
 from dataclasses import dataclass
 from datetime import datetime
 from typing import Any
-
-import pytz
+from zoneinfo import ZoneInfo
 
 
 @dataclass
@@ -68,7 +67,27 @@ def fromtimestamp(epoch_time: int, default: None = None) -> Any:
     try:
         return datetime.fromtimestamp(
             epoch_time / 1000,
-            tz=pytz.timezone("Europe/Brussels"),
+            tz=ZoneInfo("Europe/Brussels"),
         )
     except (ValueError, TypeError):
         return default
+
+
+@dataclass
+class ParkingRecord:
+    """Original GIS identity, full WGS84 area and unmodified source claims."""
+
+    gis_id: str
+    geometry: dict[str, Any]
+    source_attributes: dict[str, Any]
+
+
+@dataclass
+class ParkingCollection:
+    """Evidence for a complete selection, never a truncated inspection list."""
+
+    records: list[ParkingRecord]
+    total_count: int
+    pages_fetched: int
+    source_version: str | None
+    complete: bool = True
