@@ -24,7 +24,7 @@ classifiers = [
 dependencies = [
   "aiohttp>=3.0.0",
   "yarl>=1.6.0",
-  "pytz>=2026.5,<2026.6",
+  "pytz>=2022.7.1,<2027",
 ]
 
 [project.urls]
