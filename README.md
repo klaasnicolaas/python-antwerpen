@@ -210,7 +210,7 @@ SOFTWARE.
 
 ## Complete parking collections
 
-`await client.parking_collection(set_filter=None, max_records=10000)` returns `ParkingCollection(records, total_count, pages_fetched, source_version=None, complete=True)`. Each `ParkingRecord` preserves its original `GISID` as `spot_id`, full WGS84 `geometry` (including all rings), and unmodified `source_attributes`. The existing capped `disabled_parkings()` inspection API remains compatible.
+`await client.parking_collection(set_filter=None, max_records=10000)` returns `ParkingCollection(records, total_count, pages_fetched, source_version=None, complete=True)`. Each `ParkingRecord` preserves its original `GISID` as `gis_id`, full WGS84 `geometry` (including all rings), and unmodified `source_attributes`. The existing capped `disabled_parkings()` inspection API remains compatible.
 
 The client reads the source count, ordered 500-record pages twice, and the final count. Short pages, duplicate/missing GIS IDs or OBJECTIDs, observed source edits, ArcGIS errors and safety-ceiling overflow raise `ODPAntwerpenError`; no partial collection is returned. Empty selections can be proven complete. Two identical reads are change detection, not a transactional snapshot. GISID continuity is not guaranteed by the publisher; OBJECTID only orders retrieval.
 

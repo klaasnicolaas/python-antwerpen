@@ -214,22 +214,22 @@ class ODPAntwerpen:
                     msg = "Invalid parking feature"
                     raise ODPAntwerpenError(msg)
                 attributes = feature["properties"]
-                spot_id = attributes.get("GISID")
+                gis_id = attributes.get("GISID")
                 object_id = attributes.get("OBJECTID")
                 if (
-                    not isinstance(spot_id, str)
-                    or not spot_id
-                    or spot_id != spot_id.strip()
-                    or spot_id in seen
+                    not isinstance(gis_id, str)
+                    or not gis_id
+                    or gis_id != gis_id.strip()
+                    or gis_id in seen
                     or isinstance(object_id, bool)
                     or not isinstance(object_id, int)
                     or object_id in object_ids
                 ):
                     msg = "Missing or duplicate parking identity"
                     raise ODPAntwerpenError(msg)
-                seen.add(spot_id)
+                seen.add(gis_id)
                 object_ids.add(object_id)
-                records.append(ParkingRecord(spot_id, feature["geometry"], attributes))
+                records.append(ParkingRecord(gis_id, feature["geometry"], attributes))
             if len(records) == total and data.get("exceededTransferLimit"):
                 msg = "Parking response has remaining records"
                 raise ODPAntwerpenError(msg)

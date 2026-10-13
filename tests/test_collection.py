@@ -40,7 +40,7 @@ async def test_complete_collection() -> None:
     assert result.pages_fetched == 4
     assert result.complete
     assert result.source_version is None
-    assert result.records[0].spot_id == "GIS_0"
+    assert result.records[0].gis_id == "GIS_0"
     assert result.records[0].source_attributes == records[0]["properties"]
     assert result.records[0].geometry == records[0]["geometry"]
     assert request.call_args_list[1].kwargs["params"]["outSR"] == 4326
