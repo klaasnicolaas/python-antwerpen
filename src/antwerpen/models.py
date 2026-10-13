@@ -72,3 +72,23 @@ def fromtimestamp(epoch_time: int, default: None = None) -> Any:
         )
     except (ValueError, TypeError):
         return default
+
+
+@dataclass
+class ParkingRecord:
+    """Original GIS identity, full WGS84 area and unmodified source claims."""
+
+    spot_id: str
+    geometry: dict[str, Any]
+    source_attributes: dict[str, Any]
+
+
+@dataclass
+class ParkingCollection:
+    """Evidence for a complete selection, never a truncated inspection list."""
+
+    records: list[ParkingRecord]
+    total_count: int
+    pages_fetched: int
+    source_version: str | None
+    complete: bool = True
