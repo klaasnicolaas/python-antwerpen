@@ -77,7 +77,7 @@ def fromtimestamp(epoch_time: int, default: None = None) -> Any:
 class ParkingRecord:
     """Original GIS identity, full WGS84 area and unmodified source claims."""
 
-    gis_id: str
+    id: str
     geometry: dict[str, Any]
     source_attributes: dict[str, Any]
 
